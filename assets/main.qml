@@ -33,8 +33,8 @@ Page {
                 // delete the stored user data of the user from the database
                 Authentication.auth.deleteStoredFlickrData();
 
-                flickrOauthExampleMainPage.labelUserIsLoggedOut.visible = true;
-                flickrOauthExampleMainPage.labelUserIsLoggedIn.visible = false;
+                labelUserIsLoggedOut.visible = true;
+                labelUserIsLoggedIn.visible = false;
 
                 // open logout notification
                 var logoutPage = logoutComponent.createObject();

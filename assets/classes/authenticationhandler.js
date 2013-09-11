@@ -358,7 +358,7 @@ AuthenticationHandler.prototype.storeFlickrData = function(userId, accessToken, 
 	}
 
 	console.log("# Trying to store userdata into database");
-	var db = openDatabaseSync("FlickrGO", "1.0", "FlickrGO persistent data storage", 1);
+	var db = openDatabaseSync("FlickrOauthExample", "1.0", "FlickrOauthExample persistent data storage", 1);
 	var dataStr = "INSERT INTO userdata VALUES(?, ?, ?)";
 	var data = [ userId, accessToken, accessSecret ];
 	db.transaction(function(tx) {
@@ -375,7 +375,7 @@ AuthenticationHandler.prototype.getStoredFlickrData = function() {
 	console.log("# Getting stored userdata from database for user");
 
 	var flickrUserdata = new Array();
-	var db = openDatabaseSync("FlickrGO", "1.0", "FlickrGO persistent data storage", 1);
+	var db = openDatabaseSync("FlickrOauthExample", "1.0", "FlickrOauthExample persistent data storage", 1);
 
 	db.transaction(function(tx) {
 		tx.executeSql('CREATE TABLE IF NOT EXISTS userdata(id TEXT, access_token TEXT, access_secret TEXT)');
@@ -420,7 +420,7 @@ AuthenticationHandler.prototype.isAuthenticated = function() {
 // As the isAuthenticated method relies on the database content it will return
 // false from now on
 AuthenticationHandler.prototype.deleteStoredFlickrData = function() {
-	var db = openDatabaseSync("FlickrGO", "1.0", "FlickrGO persistent data storage", 1);
+	var db = openDatabaseSync("FlickrOauthExample", "1.0", "FlickrOauthExample persistent data storage", 1);
 
 	db.transaction(function(tx) {
 		tx.executeSql('DROP TABLE userdata');

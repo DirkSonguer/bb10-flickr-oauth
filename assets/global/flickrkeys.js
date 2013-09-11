@@ -14,10 +14,10 @@ var flickrkeys = new FlickrKeys();
 function FlickrKeys()
 {
 	// Flickr client id
-	this.flickrClientId = "ade5c803d5c7e7bc2012f2a0785f829c";
+	this.flickrClientId = "EnterYourFlickrAPIKeyHere";
 
 	// Flickr client secret
-	this.flickrClientSecret = "82c6623054bfa8df";
+	this.flickrClientSecret = "EnterYourFlickrAPISecretHere";
 
 	// Flickr API URL
 	this.flickrAPIUrl = "http://www.flickr.com";
@@ -32,7 +32,7 @@ function FlickrKeys()
 	this.flickrTokenAccessUrl = this.flickrAPIUrl + "/services/oauth/access_token";
 
 	// Flickr callback
-	this.flickrCallback = "http://www.instago.mobi";
+	this.flickrCallback = "http://www.EnterYourCallbackURLHere.com";
 }
 
 

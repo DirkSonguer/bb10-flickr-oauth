@@ -174,8 +174,8 @@ Page {
         loginLoading.running = false;
         loginLoading.visible = false;
         loginSuccessContainer.visible = true;
-        flickrOauthExampleMainPage.labelUserIsLoggedOut.visible = false;
-        flickrOauthExampleMainPage.labelUserIsLoggedIn.visible = true;
+        labelUserIsLoggedOut.visible = false;
+        labelUserIsLoggedIn.visible = true;
     }
 
     onOAuthAccessTokenError: {
