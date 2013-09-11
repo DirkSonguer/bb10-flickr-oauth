@@ -1,0 +1,20 @@
+// *************************************************** //
+// Flickr Oauth Example Main Page
+//
+// This is a simple example project how to handle Oauth
+// processes in QML / Canvas apps with pure JavaScript.
+// The example uses Flickr as a demo platform
+// *************************************************** //
+
+Author: Dirk Songuer
+Contact: dirk@songuer.de
+Link: https://github.com/DirkSonguer/Cascades_Flickr_Oauth_Example
+
+
+Things you have to do to get this example running:
+
+* Go get Flickr API keys here: http://www.flickr.com/services/
+* Enter the keys here: /assets/global/flickrkeys.js
+* Compile and run
+
+Tested with BlackBerry 10.1 and simulator 10.1.0.4828

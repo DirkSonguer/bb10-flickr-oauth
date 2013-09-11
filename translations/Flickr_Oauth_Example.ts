@@ -4,8 +4,13 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../assets/main.qml" line="8"/>
-        <source>Hello World</source>
+        <location filename="../assets/main.qml" line="19"/>
+        <source>You are logged in. Tap to log out</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../assets/main.qml" line="42"/>
+        <source>Tap to start Flickr login process</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

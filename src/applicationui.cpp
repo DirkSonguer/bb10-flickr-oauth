@@ -25,6 +25,18 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app) :
     // to ensure the document gets destroyed properly at shut down.
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
 
+    // Retrieve the path to the app's working directory
+    QString workingDir = QDir::currentPath();
+
+    // Build the path, add it as a context property, and expose
+    // it to QML
+    QDeclarativePropertyMap* dirPaths = new QDeclarativePropertyMap;
+    dirPaths->insert("currentPath", QVariant(QString(
+            "file://" + workingDir)));
+    dirPaths->insert("assetPath", QVariant(QString(
+            "file://" + workingDir + "/app/native/assets/")));
+    qml->setContextProperty("dirPaths", dirPaths);
+
     // Create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
 

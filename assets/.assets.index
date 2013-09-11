@@ -1,0 +1,14 @@
+1
+12
+classes/authenticationhandler.js
+classes/networkhandler.js
+classes/oauth.js
+classes/sha1.js
+classes/uniqueid.js
+global/flickrkeys.js
+global/globals.js
+main.qml
+sheets/UserLogin.qml
+sheets/UserLogout.qml
+structures/errordata.js
+structures/tokenstatus.js
