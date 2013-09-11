@@ -66,19 +66,14 @@ NetworkHandler.prototype.handleHttpResult = function(XMLHttpRequestObject) {
 	}
 };
 
-// This script analyses the traffic from Instagram for possible errors
+// This script analyses the traffic from Flickr for possible errors
 // Note that this scripts does the analysing but does not act upon found errors
 NetworkHandler.prototype.checkResponseForErrors = function(httpResponseText,
 		httpResponseStatus) {
 	// console.log("Check HTTP response for errors");
 
 	if (httpResponseText.indexOf('oauth_problem') !== -1) {
-		// console.log("# Response does not have response 200 verification by
-		// Instagram");
-		// console.log("# JSON evaluation not successful, adding generic
-		// error");
-
-		// the error was not handled by Instagram
+		// the error was not handled by Flickr
 		// fill the error data object with a generic error description
 		this.errorData.errorType = "OAuth Error";
 		this.errorData.errorCode = httpResponseStatus;
